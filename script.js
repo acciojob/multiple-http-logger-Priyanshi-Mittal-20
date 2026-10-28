@@ -6,3 +6,13 @@ const urls = [
 
 // Don't change the above line
 // Write your code here
+async function fetchData(arr)
+{
+	for(let i of arr)
+		{
+			let res= await fetch(i)
+			let data= await res.json()
+			console.log(data)
+		}
+}
+fetchData(urls)
